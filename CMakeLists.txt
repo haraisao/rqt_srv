@@ -12,3 +12,7 @@ install(FILES plugin.xml
 install(PROGRAMS scripts/rqt_srv
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+if(WIN32)
+  install_python_cli(rqt_srv)
+endif()
